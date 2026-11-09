@@ -4,25 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>أذكار الصباح والمساء</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Cairo:wght@800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Cairo:wght@400;500;700;800&display=swap">
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-padding-top:env(safe-area-inset-top,0px);overflow-x:hidden;overflow-y:scroll}
 *{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
-body{font-family:Tajawal,system-ui,sans-serif;min-height:100%;color:#7a571b;background:#d6ae5e}
+body{font-family:Cairo,system-ui,sans-serif;min-height:100%;color:#7a571b;background:#d6ae5e}
 body.n{color:#e9ecff;background:#10183f}
 .sky{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .sky>i{position:absolute;inset:0;transition:opacity .8s}
 .day{background:linear-gradient(#f4e3bc,#f2dcab 35%,#e0bd70 75%,#d4ac5b)}
-.night{background:linear-gradient(#060b20,#10183f 55%,#1f2c64);opacity:0}
+.night{background:radial-gradient(ellipse 900px 380px at 50% 300px,rgba(70,100,190,.33),rgba(70,100,190,.3) 20%,rgba(70,100,190,.218) 43%,rgba(70,100,190,.08) 72%,transparent 100%),linear-gradient(#060a1e,#060b20 4%,#080e24 15%,#080f27 21%,#0a112b 30%,#0b1430 42%,#101b3d 61%,#15224b 81%,#1a2956 97%,#1b2a58);opacity:0}
 body.n .night{opacity:1}
 body.n .day{opacity:0}
-.sun,.moon{position:absolute;left:85%;top:197px;width:136px;height:136px;margin:-68px 0 0 -68px;transition:transform .7s ease-in-out,opacity .5s ease-in-out}
+.sun,.moon{position:absolute;left:85.4%;top:197px;transition:transform .7s ease-in-out,opacity .5s ease-in-out}
+.sun{width:136px;height:136px;margin:-68px 0 0 -68px}
 .sun{border-radius:50%;background:radial-gradient(circle at 36% 30%,#fffde9,#fff0a6 32%,#fde68a 64%,#f5d36b);box-shadow:inset -8px -10px 24px #f0c85a77,0 0 40px 10px #fff2b04d}
 .sun:before{content:"";position:absolute;inset:-26%;background:repeating-conic-gradient(from 12deg,#fff6 0 6deg,transparent 6deg 30deg);-webkit-mask:radial-gradient(circle closest-side,transparent 68%,#000 69%,#000 94.5%,transparent 95.5%);mask:radial-gradient(circle closest-side,transparent 68%,#000 69%,#000 94.5%,transparent 95.5%);filter:blur(.3px);animation:rot 90s linear infinite}
 @keyframes rot{to{transform:rotate(360deg)}}
-.moon{border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#e8ecff 55%,#c9d3f5);box-shadow:0 0 40px 12px #c4ceff66,0 0 110px 40px #8fa1ff33;transform:rotate(-90deg);opacity:0}
-.moon:after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 24% 25%,#c3cdf0 7%,transparent 8%),radial-gradient(circle at 52% 36%,#c3cdf0 10%,transparent 11%),radial-gradient(circle at 30% 62%,#c3cdf0 8%,transparent 9%)}
+.moon{font-size:140px;width:1em;height:1em;margin:-.5em 0 0 -.5em;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e3eafe,#dbe3fb);box-shadow:0 0 36px 10px #c3d0ff8c,0 0 90px 25px #8ca0f04d;transform:rotate(-90deg);opacity:0}
+.moon:after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle .06em at .314em .315em,#c6d3f8 92%,transparent),radial-gradient(circle .096em at .577em .376em,#c6d3f8 92%,transparent),radial-gradient(circle .074em at .375em .596em,#c6d3f8 92%,transparent)}
 body.n .sun{transform:rotate(90deg);opacity:0}
 body.n .moon{transform:none;opacity:1}
 .cl{position:absolute;border-radius:3em;background:linear-gradient(#fffefa,#f1e7d2);box-shadow:0 12px 30px #8a5a1022;opacity:.92;transition:opacity .6s;animation:fl 28s ease-in-out infinite alternate}
@@ -38,43 +39,49 @@ body.n .cl{opacity:0}
 body.n .st{opacity:1;animation:tw 3s ease-in-out infinite}
 @keyframes tw{50%{opacity:.25}}
 main{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:80px 18px 40px}
-.tg{display:flex;position:relative;padding:5px;border-radius:40px;background:#f9f1de;box-shadow:inset 0 0 0 2px #ffffffd0,0 10px 24px #9a6e1f2e}
-body.n .tg{background:#ffffff1c;box-shadow:0 0 0 1px #ffffff30,0 8px 22px #0006}
+.tg{display:flex;position:relative;padding:7px 5px 6px;border-radius:40px;background:#f9f1de;box-shadow:inset 0 0 0 2px #ffffffd0,0 10px 24px #9a6e1f2e}
+body.n .tg{background:linear-gradient(135deg,#becdff29,#becdff33);box-shadow:inset 0 0 0 1px #96a5ff66}
 .tg button{position:relative;z-index:1;width:52px;height:48px;border:0;background:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#8a7a5a;transition:color .5s}
-body.n .tg button{color:#9fabe0}
-body:not(.n) #bm,body.n #bn{color:#e6a93b}
-.tg svg{width:21px;height:21px;display:block}
-.tg b{position:absolute;top:5px;right:7px;width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 6px 16px #8a6a2a30,-4px 2px 14px #b49b6a40;transition:transform .5s cubic-bezier(.6,0,.3,1)}
-body.n .tg b{transform:translateX(-52px)}
+body.n .tg button{color:#aeb7dc}
+.tg button{--rg:#fff}
+body.n #bm{--rg:#2b3249}
+body:not(.n) #bm{color:#e6a93b}
+body.n #bn{color:#e8b54e}
+.tg svg{width:20px;height:20px;display:block}
+#bn svg{width:17px;height:16px}
+.tg b{position:absolute;top:7px;right:7px;width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 6px 16px #8a6a2a30,-4px 2px 14px #b49b6a40;transition:transform .5s cubic-bezier(.6,0,.3,1)}
+body.n .tg b{transform:translateX(-53px);background:#f4f6ff;box-shadow:none}
 button:focus-visible{outline:3px solid #f0a21c;outline-offset:3px}
-h1{margin-top:30px;font:800 clamp(38px,9vw,56px)/1.3 Cairo,sans-serif;color:#7a571b;text-shadow:0 4px 22px #fff7;text-align:center}
-body.n h1{color:transparent;background:linear-gradient(#fff,#c6cffa);-webkit-background-clip:text;background-clip:text;text-shadow:none}
-.sub{margin-top:16px;font-size:15px;font-weight:500;color:#7a6540}
-body.n .sub{color:#9aa6d6}
-.pr{margin-top:34px;display:flex;direction:ltr;align-items:center;gap:14px;width:min(544px,100%)}
-.pc{min-width:59px;height:30px;border-radius:16px;background:#2a241a;color:#fff;font:800 12px/30px Tajawal,sans-serif;text-align:center;box-shadow:0 4px 10px #0003}
+h1{margin-top:28px;font:800 min(var(--t,50px),11vw)/1.3 Cairo,sans-serif;color:#7a571b;text-shadow:0 4px 22px #fff7;text-align:center}
+body.n h1{color:#e3e7f9;text-shadow:0 0 12px #c8d2ff40}
+.sub{margin-top:23px;font:500 min(var(--s,16.5px),4.4vw)/1.5 Cairo,sans-serif;color:#7a6540}
+body.n .sub{color:#a9b2d6}
+.pr{margin-top:25px;display:flex;direction:ltr;align-items:center;gap:14px;width:min(544px,100%)}
+.pc{min-width:59px;height:29px;border-radius:16px;background:#2a241a;color:#fff;font:800 12px/29px Cairo,sans-serif;text-align:center;box-shadow:0 4px 10px #0003}
 body.n .pc{background:#eef0ff;color:#10183a}
 .bar{position:relative;flex:1;height:15px;border-radius:10px;background:#ebe2cd;border:1.5px solid #fffaf0;box-shadow:inset 0 1px 3px #8a6a2a22;overflow:hidden}
-body.n .bar{background:#ffffff1f;border-color:#ffffff30}
+body.n .bar{height:14px;background:linear-gradient(#ffffff12,#ffffff1a);border-color:transparent}
 .fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:10px;background:linear-gradient(90deg,#5b7b5a,#9fb48f 25%,#e8b24a 50%,#b9b872 75%,#5b7b5a);background-size:200% 100%;animation:flow 7s linear infinite;transition:width .9s cubic-bezier(.3,.9,.3,1);overflow:hidden}
 .fill:after{content:"";position:absolute;top:0;bottom:0;left:-56px;width:56px;background:linear-gradient(90deg,#fff0,#ffffff80 35%,#fff 50%,#ffffff80 65%,#fff0);animation:sh 3s ease-in-out infinite}
 @keyframes sh{0%{left:-56px}65%,100%{left:100%}}
 @keyframes flow{to{background-position:-200% 0}}
-.slot{width:min(736px,100%);margin-top:34px}
-.card{width:100%;border-radius:42px;padding:54px 44px 50px;text-align:center;background:linear-gradient(#fffdf9,#fbedd0);box-shadow:0 26px 60px #7a4a1033}
-body.n .card{background:linear-gradient(#616679e0,#4f556ae0 56px,#141b36e0 125px,#141b36e0);box-shadow:0 0 0 1px #4c5a9199,0 26px 60px #0008}
+.slot{width:min(736px,100%);margin-top:23px}
+.card{width:100%;border-radius:42px;padding:39px 44px 50px;text-align:center;background:linear-gradient(#fffdf9,#fbedd0);box-shadow:0 26px 60px #7a4a1033}
+body.n .card{background:linear-gradient(#3f465de0,#3b4259e0 25px,#373e55e0 40px,#313950e0 60px,#2d334ce0 80px,#262e46e0 100px,#1f2742e0 120px,#182039e0 140px,#151d37e0 160px,#141d37e0);box-shadow:0 0 0 1px #4c5a91ad,0 26px 60px #0008}
 .fd{transition:opacity .35s,transform .35s}
 .fd.o{opacity:0;transform:translateY(10px)}
-#tx{font:400 clamp(22px,5vw,29px)/2.4 Amiri,serif;color:#2a241a}
+#tx{font:400 clamp(22px,5vw,29.6px)/2.365 Amiri,serif;color:#2a241a}
 body.n #tx{color:#f4f5ff}
-.go{margin-top:30px;width:176px;height:56px;padding:0;border:0;border-radius:30px;font:700 20px Tajawal,sans-serif;color:#fff;background:#2a241a;box-shadow:0 12px 26px #2a241a55;cursor:pointer;transition:transform .15s,opacity .25s}
+.go{margin-top:35px;width:176px;height:52px;padding:0;border:0;border-radius:30px;font:700 var(--b,17px) Cairo,sans-serif;color:#fff;background:#2a241a;box-shadow:0 12px 26px #2a241a55;cursor:pointer;transition:transform .15s,opacity .25s}
 body.n .go{background:#eef0ff;color:#10183a;box-shadow:0 12px 26px #0006}
 .go:active{transform:scale(.94)}
 .go.off{opacity:.62;pointer-events:none;transform:none}
-.go b{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 6px;margin-inline-start:12px;border-radius:14px;background:#e8b24a;color:#2a241a;font:800 14px Tajawal,sans-serif;vertical-align:middle}
-.hint{margin-top:26px;min-height:24px;font-size:15px;color:#7a6540;text-align:center}
-body.n .hint{color:#a4aedd}
-.hint b{color:#f0a21c;margin-inline-end:8px}
+.go b{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 6px;margin-inline-start:12px;border-radius:14px;background:#e8b24a;color:#2a241a;font:800 14px Cairo,sans-serif;vertical-align:middle}
+.hint{margin-top:26px;min-height:24px;font:400 var(--h,15px)/24px Cairo,sans-serif;color:#7a6540;text-align:center}
+body.n .hint{color:#959db8}
+.hint b{display:inline-block;vertical-align:-2px;margin-inline-end:10px;color:#eab13e}
+body.n .hint b{color:#ca9b40}
+.hint b svg{width:14px;height:14px;display:block}
 footer{margin-top:auto;padding-top:60px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
 footer h3{font:400 26px Amiri,serif;opacity:.85}
 .pill{padding:14px 28px;border-radius:30px;background:#efe0bd;border:2px solid #fff9;font-weight:700;font-size:15px;line-height:1.7;color:#6b4410}
@@ -82,14 +89,14 @@ body.n .pill{background:#ffffff14;border-color:#ffffff33;color:#e3e7ff}
 footer small{font-size:13px;color:#7a6540cc}
 body.n footer small{color:#9aa6d6}
 .pop{position:fixed;left:0;top:0;z-index:20;width:20px;height:20px;margin:-10px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fbe3a3,#f0c462 65%,#e8b24a);opacity:.95;box-shadow:0 0 10px 3px #f0c46a88;pointer-events:none;will-change:transform}
-@media(max-width:600px){main{padding-top:60px}.card{padding:40px 22px 34px;border-radius:32px}.sun,.moon{width:84px;height:84px;margin:-42px 0 0 -42px;top:110px;left:80%}.c1{top:90px}}
+@media(max-width:600px){main{padding-top:60px}.card{padding:40px 22px 34px;border-radius:32px}.sun{width:84px;height:84px;margin:-42px 0 0 -42px}.moon{font-size:84px}.sun,.moon{top:110px;left:80%}.c1{top:90px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}}
 </style>
 </head>
 <body>
 <div class="sky"><i class="day"></i><i class="night"></i><div class="cl c1"></div><div class="cl c2"></div><div class="cl c3"></div><div class="sun"></div><div class="moon"></div><div id="stars"></div></div>
 <main>
-<div class="tg" role="group" aria-label="اختيار الوقت"><b></b><button id="bm" aria-label="أذكار الصباح"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.13 2.02L17.52 6.48L21.98 7.87L19.80 12.00L21.98 16.13L17.52 17.52L16.13 21.98L12.00 19.80L7.87 21.98L6.48 17.52L2.02 16.13L4.20 12.00L2.02 7.87L6.48 6.48L7.87 2.02L12.00 4.20Z" fill="currentColor"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="#fff" stroke-width="1.3"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg></button><button id="bn" aria-label="أذكار المساء"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" transform="rotate(45 12 12)" fill="currentColor"/></svg></button></div>
+<div class="tg" role="group" aria-label="اختيار الوقت"><b></b><button id="bm" aria-label="أذكار الصباح"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.13 2.02L17.52 6.48L21.98 7.87L19.80 12.00L21.98 16.13L17.52 17.52L16.13 21.98L12.00 19.80L7.87 21.98L6.48 17.52L2.02 16.13L4.20 12.00L2.02 7.87L6.48 6.48L7.87 2.02L12.00 4.20Z" fill="currentColor"/><circle cx="12" cy="12" r="4.6" fill="none" style="stroke:var(--rg)" stroke-width="1.3"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg></button><button id="bn" aria-label="أذكار المساء"><svg viewBox="6 5 17 16" aria-hidden="true"><defs><mask id="mm"><rect x="0" y="0" width="30" height="30" fill="#fff"/><circle cx="19.5" cy="10.2" r="6.2" fill="#000"/></mask></defs><circle cx="14.5" cy="13.2" r="7.6" fill="currentColor" mask="url(#mm)"/></svg></button></div>
 <h1 id="ttl"></h1>
 <p class="sub" id="sub"></p>
 <div class="pr"><span class="pc" id="pc">0%</span><div class="bar" id="bar"><div class="fill" id="fill"></div></div></div>
@@ -119,10 +126,11 @@ var D=[
 ["لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.",10,"من قالها عشر مرات حين {يصبح|يمسي} كان له عدل رقبة وحُفظ من الشيطان."]
 ];
 var $=function(x){return document.getElementById(x)},m=new Date().getHours()<15,L=D,i=0,r=0,busy=0,fin=0,w,QF="'Amiri Quran',Amiri,serif";
+var STAR='<b><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.2L12 17.8 5.7 21.4l1.7-7.2L2 9.5l7.1-.6z" fill="currentColor"/></svg></b>';
 function T(t){return t.replace(/\{([^|}]+)\|([^}]+)\}/g,function(_,a,b){return m?a:b})}
 function lab(){var t=L[i][1];$("go").innerHTML=t==1?"تسبيح":r==1?"إتمام":"تكرار<b>"+r+"</b>"}
 function anim(){[$("card"),$("hint")].forEach(function(e){e.animate([{opacity:0,transform:"translateY(28px)"},{opacity:1,transform:"none"}],{duration:600,easing:"cubic-bezier(.2,.7,.3,1)"})})}
-function fill(d){$("tx").innerHTML=T(d[0]);$("tx").style.fontFamily=d[3]?QF:"";$("hint").innerHTML=d[2]?"<b>\u2605</b>"+T(d[2]):""}
+function fill(d){$("tx").innerHTML=T(d[0]);$("tx").style.fontFamily=d[3]?QF:"";$("hint").innerHTML=d[2]?STAR+T(d[2]):""}
 function show(){var d=L[i];fill(d);r=d[1];fin=0;busy=0;$("go").classList.remove("off");lab();anim()}
 function finish(){fin=1;busy=0;$("go").classList.remove("off");$("tx").style.fontFamily="";$("tx").textContent=m?"ما شاء الله، أتممت أذكار الصباح، اللهم اجعله يومًا سعيدًا عليك.":"ما شاء الله، أتممت أذكار المساء، اللهم اجعلها ليلةً سعيدةً عليك.";$("hint").innerHTML="";$("go").textContent="إعادة الأذكار";anim()}
 function fit(){var sl=$("slot"),tx=$("tx"),hn=$("hint"),go=$("go"),a=[tx.innerHTML,tx.style.fontFamily,hn.innerHTML,go.innerHTML],mx=0;sl.style.minHeight="0";L.forEach(function(d){fill(d);go.innerHTML="تكرار<b>100</b>";mx=Math.max(mx,sl.offsetHeight)});tx.innerHTML=a[0];tx.style.fontFamily=a[1];hn.innerHTML=a[2];go.innerHTML=a[3];sl.style.minHeight=mx+"px"}
@@ -136,7 +144,14 @@ $("go").onclick=function(){if(busy)return;if(fin){setMode(m);return}r--;if(r>0){
 $("bm").onclick=function(){if(!m)setMode(1)};$("bn").onclick=function(){if(m)setMode(0)};
 var s=$("stars");for(var k2=0;k2<110;k2++){var e=document.createElement("span"),z=1+Math.random()*2;e.className="st";e.style.cssText="left:"+Math.random()*100+"%;top:"+Math.random()*100+"%;width:"+z+"px;height:"+z+"px;animation-delay:"+Math.random()*3+"s";s.appendChild(e)}
 addEventListener("resize",function(){clearTimeout(w);w=setTimeout(fit,150)});addEventListener("load",fit);if(document.fonts)document.fonts.ready.then(fit);
-setMode(m);
+function cal(){if(!document.fonts||!document.fonts.load)return;var c=document.createElement("canvas").getContext("2d"),R=document.documentElement.style;
+Promise.all([document.fonts.load("800 50px Cairo","أذكار"),document.fonts.load("500 16px Cairo","اختم"),document.fonts.load("400 15px Cairo","آية"),document.fonts.load("700 17px Cairo","تسبيح")]).then(function(){
+function sz(f,t,w,lo,hi,d){c.font=f;var x=c.measureText(t).width;if(!x)return d;var v=w/x*100;return v>=lo&&v<=hi?v:d}
+R.setProperty("--t",sz("800 100px Cairo","أذكار المساء",280,46,54,50)+"px");
+R.setProperty("--s",sz("500 100px Cairo","اختم يومك بذكر الله",122,14,19,16.5)+"px");
+R.setProperty("--h",sz("400 100px Cairo","آية الكرسي: من قالها حين يمسي أجير من الجن حتى يصبح.",335,13,17,15)+"px");
+R.setProperty("--b",sz("700 100px Cairo","تسبيح",50,15,22,17)+"px");fit()}).catch(function(){})}
+setMode(m);cal();
 </script>
 </body>
 </html>
